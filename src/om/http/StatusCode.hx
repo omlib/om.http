@@ -1,14 +1,24 @@
 package om.http;
 
-@:enum abstract StatusCode(Int) from Int to Int {
+/**
+	@see http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+*/
+@:enum abstract StatusCode(Int) to Int {
 
-	// 1xx Informational
+	// --- 1xx Informational - Request received, continuing process
 
+	/**
+		The server has received the request headers and the client should proceed to send the request body
+	*/
 	var CONTINUE = 100;
+
+	/**
+		The requester has asked the server to switch protocols and the server has agreed to do so
+	*/
 	var SWITCHING_PROTOCOLS = 101;
 	var PROCESSING = 102;
 
-	// --- 2xx Success
+	// --- 2xx Success - The action was successfully received, understood, and accepted
 
 	var OK = 200;
 	var CREATED = 201;
@@ -22,7 +32,7 @@ package om.http;
 	var LOW_ON_STORAGE_SPACE = 250;
 	var IM_USED = 226;
 
-	// --- 3xx Redirection
+	// --- 3xx Redirection - Further action must be taken in order to complete the request
 
 	var MULTIPLE_CHOICE = 300;
 	var MOVED_PERMANENTLY = 301;
@@ -34,12 +44,17 @@ package om.http;
 	var TEMPORARY_REDIRECT = 307;
 	var PERMANENT_REDIRECT = 308;
 
-	// --- 4xx Client Error
+	// --- 4xx Client Error - The request contains bad syntax or cannot be fulfilled
 
 	var BAD_REQUEST = 400;
 	var UNAUTHORIZED = 401;
 	var PAYMENT_REQUIRED = 402;
 	var FORBIDDEN = 403;
+
+	/**
+		The requested resource could not be found but may be available in the future.
+		Subsequent requests by the client are permissible.
+	*/
 	var NOT_FOUND = 404;
 	var METHOD_NOT_ALLOWED = 405;
 	var NOT_ACCEPTABLE = 406;
@@ -77,8 +92,11 @@ package om.http;
 	var HTTP_TO_HTTPS = 497;
 	var CLIENT_CLOSED_REQUEST = 499;
 
-	// --- 5xx Server Error
+	// --- 5xx Server Error - The server failed to fulfill an apparently valid request
 
+	/**
+		The server either does not recognize the request method, or it lacks the ability to fulfil the request
+	*/
 	var INTERNAL_SERVER_ERROR = 500;
 	var NOT_IMPLEMENTED = 501;
 	var BAD_GATEWAY = 502;
