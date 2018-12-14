@@ -1,15 +1,18 @@
 package om.http;
 
-class Error {
+class Error extends om.error.ErrorType {
 
-	public var code : Int;
+	public var code : StatusCode;
 
-	public function new( code : Int ) {
+	public function new( code : StatusCode, ?pos : haxe.PosInfos ) {
 		this.code = code;
+		super( 'http error $code', pos );
 	}
 
+	/*
 	public function toString() : String {
 		return 'http error $code';
 	}
+	*/
 
 }

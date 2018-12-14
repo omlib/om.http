@@ -1,6 +1,0 @@
---no-output
--js x
--xml haxedoc.xml
--cp src
--dce full
---macro include('om.http')
