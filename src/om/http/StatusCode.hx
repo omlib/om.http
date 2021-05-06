@@ -3,7 +3,7 @@ package om.http;
 /**
 	@see http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
 */
-@:enum abstract StatusCode(Int) to Int {
+enum abstract StatusCode(Int) to Int {
 
 	// --- 1xx Informational - Request received, continuing process
 
@@ -29,8 +29,10 @@ package om.http;
 	var PARTIAL_CONTENT = 206;
 	var MULTI_STATUS = 207;
 	var ALREADY_REPORTED = 208;
-	var LOW_ON_STORAGE_SPACE = 250;
+
 	var IM_USED = 226;
+
+	var LOW_ON_STORAGE_SPACE = 250;
 
 	// --- 3xx Redirection - Further action must be taken in order to complete the request
 

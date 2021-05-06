@@ -4,7 +4,7 @@
     "description": "HTTP helpers",
     "tags": ["om","http"],
     "url": "https://github.com/omlib/om.http",
-    "license": "OM",
+    "license": "Public",
     "contributors": ["tong"],
     "releasenote": "See CHANGELOG",
     "classPath" : "src/",
