@@ -15,8 +15,9 @@ enum abstract StatusCode(Int) from Int to Int {
 	/**
 		The requester has asked the server to switch protocols and the server has agreed to do so
 	*/
-	var SWITCHING_PROTOCOLS = 101;
+	var SWITCHING_PROTOCOL = 101;
 	var PROCESSING = 102;
+	var EARLY_HINTS = 103;
 
 	// --- 2xx Success - The action was successfully received, understood, and accepted
 
