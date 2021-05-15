@@ -3,7 +3,7 @@ package om.http;
 /**
 	@see http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
 */
-enum abstract StatusCode(Int) to Int {
+enum abstract StatusCode(Int) from Int to Int {
 
 	// --- 1xx Informational - Request received, continuing process
 
