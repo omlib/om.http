@@ -1,8 +1,5 @@
 package om.http;
 
-/**
-	@see http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
-*/
 enum abstract StatusCode(Int) from Int to Int {
 
 	// --- 1xx Informational - Request received, continuing process
@@ -62,10 +59,12 @@ enum abstract StatusCode(Int) from Int to Int {
 	var METHOD_NOT_ALLOWED = 405;
 	var NOT_ACCEPTABLE = 406;
 	var PROXY_AUTHENTICATION_REQUIRED = 407;
+	var REQUEST_TIMEOUT = 408;
 	var CONFLICT = 409;
 	var GONE = 410;
 	var LENGTH_REQUIRED = 411;
 	var PRECONDITION_FAILED = 412;
+
 	var REQUEST_ENTITY_TOO_LARGE = 413;
 	var REQUEST_URI_TOO_LARGE = 414;
 	var UNSUPPORTED_MEDIA_TYPE = 415;
